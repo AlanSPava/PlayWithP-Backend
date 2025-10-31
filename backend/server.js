@@ -1,11 +1,4 @@
-// server.js (Extracto)
-require('dotenv').config(); // Carga las variables de .env
-// ...
-// Conexión a la Base de Datos (MongoDB Atlas)
-mongoose.connect(process.env.MONGODB_URI) // Aquí lee la variable del archivo .env
-    .then(() => console.log('Conectado a MongoDB Atlas'))
-    .catch(err => console.error('Error de conexión a la BD:', err));
-// ...
+// ... 
 
 // server.js
 require('dotenv').config();
@@ -34,3 +27,11 @@ app.get('/', (req, res) => {
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
+
+// server.js (Extracto)
+require('dotenv').config(); // Carga las variables de .env
+// ...
+// Conexión a la Base de Datos (MongoDB Atlas)
+mongoose.connect(process.env.MONGODB_URI) // Aquí lee la variable del archivo .env
+    .then(() => console.log('Conectado a MongoDB Atlas'))
+    .catch(err => console.error('Error de conexión a la BD:', err));
